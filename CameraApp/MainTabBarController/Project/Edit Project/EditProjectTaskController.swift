@@ -9,6 +9,19 @@
 import UIKit
 
 class EditProjectTaskController: UIViewController{
+
+
+    var editProject: ProjectListModel?{
+        didSet{
+            prefillValues()
+        }
+    }
+    
+    var delegate: ProjectController?
+    var startDate: Date?
+    var endDate: Date?
+    var projectAssignIds: String?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,77 +29,39 @@ class EditProjectTaskController: UIViewController{
         addViews()
         setupNavigationController()
     }
-    
-    func addViews(){
-        
-        
-        let startDateLbl = UILabel().tempLabel(text: "Start Date")
-        let endDateLbl = UILabel().tempLabel(text: "End Date")
-        let projectAssignLbl = UILabel().tempLabel(text: "Project Assign to")
-        let projectBudgetLbl = UILabel().tempLabel(text: "Project Budget")
-        let cardView = CardView()
-        cardView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        view.addSubview(cardView)
-        view.addSubview(projectNameTextField)
-        view.addSubview(startDateLbl)
-        view.addSubview(endDateLbl)
-        view.addSubview(startDateButton)
-        view.addSubview(endDateButton)
-        
-        view.addSubview(projectAssignLbl)
-        view.addSubview(projectAssignButton)
-        
-        view.addSubview(projectBudgetLbl)
-        view.addSubview(projectBudgetButton)
-        
-        
-        
-        
-        
-        cardView.anchorWithConstantsToTop(top: view.topAnchor, left: view.leftAnchor, bottom: projectBudgetButton.bottomAnchor, right: view.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: -16, rightConstant: 16)
-        
-        projectNameTextField.anchorWithConstantsToTop(top: cardView.topAnchor, left: cardView.leftAnchor, bottom: nil, right: cardView.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: 32, rightConstant: 16)
-        projectNameTextField.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
-        
-        startDateLbl.anchorWithConstantsToTop(top: projectNameTextField.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 16, bottomConstant: 16, rightConstant: 16)
-        
-        startDateButton.anchorWithConstantsToTop(top: startDateLbl.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 16, rightConstant: 16)
-        startDateButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
-        startDateButton.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width - 72)/2 ).isActive = true
-        
-        
-        endDateLbl.anchorWithConstantsToTop(top: projectNameTextField.bottomAnchor, left: endDateButton.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 16, rightConstant: 16)
-        
-        
-        endDateButton.anchorWithConstantsToTop(top: endDateLbl.bottomAnchor, left: startDateButton.rightAnchor, bottom: nil, right: cardView.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 16)
-        endDateButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
-        
-        
-        projectAssignLbl.anchorWithConstantsToTop(top: endDateButton.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 16, bottomConstant: 16, rightConstant: 16)
-        
-        projectAssignButton.anchorWithConstantsToTop(top: projectAssignLbl.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: cardView.rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 16)
-        projectAssignButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
-        
-        projectBudgetLbl.anchorWithConstantsToTop(top: projectAssignButton.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 16, bottomConstant: 16, rightConstant: 16)
-        
-        projectBudgetButton.anchorWithConstantsToTop(top: projectBudgetLbl.bottomAnchor, left: cardView.leftAnchor, bottom: nil, right: cardView.rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 16)
-        projectBudgetButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
-        
-        
-        
-        
-        
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+
+
+
     
     func setupNavigationController(){
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.4470588235, green: 0.568627451, blue: 0.9568627451, alpha: 1)]
-        navigationItem.title = "Profile"
+
+        if let _ = editProject{
+            navigationItem.title = "Update Project"
+        }else{
+            navigationItem.title = "Create Project"
+        }
+
     }
     
-    let projectNameTextField: UITextField = {
+    lazy var projectNameTextField: UITextField = {
         let tf  = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "Project Name"
@@ -97,6 +72,7 @@ class EditProjectTaskController: UIViewController{
         tf.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         tf.layer.shadowOpacity = 1.0
         tf.layer.shadowRadius = 0.0
+        tf.delegate = self
         return tf
     }()
     
@@ -109,7 +85,7 @@ class EditProjectTaskController: UIViewController{
         return lbl
     }()
     
-    let startDateButton: UIButton = {
+    lazy var startDateButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("DD/MM/YYYY", for: .normal)
@@ -121,11 +97,15 @@ class EditProjectTaskController: UIViewController{
         btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         btn.layer.shadowOpacity = 1.0
         btn.layer.shadowRadius = 0.0
+        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.height * 0.07 * 0.4 + 4, bottom: 0, right: 0)
+        btn.addTarget(self, action: #selector(openCalendar(button:)), for: .touchUpInside)
+        btn.setTitleColor(.black, for: .normal)
+        btn.tag = 0
         return btn
     }()
     
     
-    let endDateButton: UIButton = {
+    lazy var endDateButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("DD/MM/YYYY", for: .normal)
@@ -133,14 +113,18 @@ class EditProjectTaskController: UIViewController{
         btn.imageView?.contentMode = .scaleAspectFit
         btn.layer.backgroundColor = UIColor.white.cgColor
         btn.layer.masksToBounds = false
+        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.height * 0.07 * 0.4 + 4, bottom: 0, right: 0)
         btn.layer.shadowColor = UIColor.lightGray.cgColor
         btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         btn.layer.shadowOpacity = 1.0
+        btn.addTarget(self, action: #selector(openCalendar(button:)), for: .touchUpInside)
+        btn.setTitleColor(.black, for: .normal)
         btn.layer.shadowRadius = 0.0
+         btn.tag = 1
         return btn
     }()
     
-    let projectAssignButton: UIButton = {
+    lazy var  projectAssignButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Select", for: .normal)
@@ -150,13 +134,32 @@ class EditProjectTaskController: UIViewController{
         btn.layer.shadowColor = UIColor.lightGray.cgColor
         btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         btn.layer.shadowOpacity = 1.0
+        btn.setTitleColor(.black, for: .normal)
+        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16 + UIScreen.main.bounds.height * 0.07 * 0.4 + 8)
+        btn.addTarget(self, action: #selector(hanldeProjectAssign), for: .touchUpInside)
         btn.layer.shadowRadius = 0.0
         return btn
     }()
     
     
+    lazy var projectCurrencyButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("$", for: .normal)
+        btn.contentHorizontalAlignment = .left
+        btn.layer.backgroundColor = UIColor.white.cgColor
+        btn.layer.masksToBounds = false
+        btn.setTitleColor(.black, for: .normal)
+        btn.layer.shadowColor = UIColor.lightGray.cgColor
+        btn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        btn.layer.shadowOpacity = 1.0
+        btn.layer.shadowRadius = 0.0
+        return btn
+    }()
+
     
-    let projectBudgetButton: UITextField = {
+    
+    lazy var projectBudgetButton: UITextField = {
         let tf  = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "$0.0"
@@ -166,8 +169,28 @@ class EditProjectTaskController: UIViewController{
         tf.layer.shadowColor = UIColor.lightGray.cgColor
         tf.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         tf.layer.shadowOpacity = 1.0
+        tf.keyboardType = .numberPad
         tf.layer.shadowRadius = 0.0
+        tf.delegate = self
         return tf
+    }()
+
+
+    lazy var createProjectButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("CREATE PROJECT", for: .normal)
+        btn.backgroundColor = #colorLiteral(red: 0.4470588235, green: 0.568627451, blue: 0.9568627451, alpha: 1)
+        btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        btn.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
+        return btn
+    }()
+
+    let activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView()
+        ai.activityIndicatorViewStyle = .white
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        return ai
     }()
     
 }
@@ -178,7 +201,15 @@ extension UILabel {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = text
+        lbl.textColor = #colorLiteral(red: 0.4470588235, green: 0.568627451, blue: 0.9568627451, alpha: 1)
         lbl.font = UIFont(name: lbl.font.fontName, size: 12)
         return lbl
+    }
+
+    func returnImage() -> UIImageView{
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.image = #imageLiteral(resourceName: "calendarImage")
+        return iv
     }
 }

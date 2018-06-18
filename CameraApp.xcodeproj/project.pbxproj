@@ -7,14 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76ADFA346BB923ACA300FAE4 /* Pods_CameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B63D5FAF73BF42AE315D7F /* Pods_CameraApp.framework */; };
+		94B954EC20BE742000CC6A63 /* ReplToGalleryCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B954EB20BE742000CC6A63 /* ReplToGalleryCameraView.swift */; };
+		94D0D757209AE6410071BB4A /* HourMinutesPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D756209AE6410071BB4A /* HourMinutesPopUp.swift */; };
+		94D0D75A209AEA0A0071BB4A /* ProtocolCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D759209AEA0A0071BB4A /* ProtocolCommunication.swift */; };
+		94D0D764209B18C80071BB4A /* EditProjectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D763209B18C80071BB4A /* EditProjectDelegate.swift */; };
+		94D0D766209B18E60071BB4A /* EditProjectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D765209B18E60071BB4A /* EditProjectViews.swift */; };
+		94D0D768209B22890071BB4A /* ProjectAssignPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D767209B22890071BB4A /* ProjectAssignPopUp.swift */; };
+		94D0D76A209B28920071BB4A /* EditProjectApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0D769209B28920071BB4A /* EditProjectApiInteraction.swift */; };
+		94D2317F209ADF050078116C /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D2317E209ADF050078116C /* CameraController.swift */; };
+		94D23181209AE2030078116C /* ProjectPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D23180209AE2030078116C /* ProjectPopUp.swift */; };
+		DB01B85E20D19E6F00C09DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB125F082078F9D0003AF997 /* Assets.xcassets */; };
+		DB0A63E220D7C83E004D7884 /* SettingsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A63E120D7C83E004D7884 /* SettingsDelegate.swift */; };
 		DB125F022078F9CD003AF997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F012078F9CD003AF997 /* AppDelegate.swift */; };
 		DB125F042078F9CD003AF997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F032078F9CD003AF997 /* ViewController.swift */; };
 		DB125F072078F9CD003AF997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB125F052078F9CD003AF997 /* Main.storyboard */; };
-		DB125F092078F9D0003AF997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB125F082078F9D0003AF997 /* Assets.xcassets */; };
 		DB125F0C2078F9D0003AF997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB125F0A2078F9D0003AF997 /* LaunchScreen.storyboard */; };
+		DB125F152078FA04003AF997 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F142078FA04003AF997 /* LoginController.swift */; };
+		DB125F1A2078FA6C003AF997 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F192078FA6B003AF997 /* CustomViews.swift */; };
+		DB125F1C2078FA76003AF997 /* CustomConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F1B2078FA76003AF997 /* CustomConstraint.swift */; };
+		DB125F1E2078FAAD003AF997 /* LoginViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F1D2078FAAD003AF997 /* LoginViews.swift */; };
+		DB125F2020790075003AF997 /* CopyrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F1F20790075003AF997 /* CopyrightView.swift */; };
+		DB125F23207922B3003AF997 /* NetworkWebApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F22207922B3003AF997 /* NetworkWebApis.swift */; };
+		DB125F2520792318003AF997 /* LoginApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F2420792318003AF997 /* LoginApiInteraction.swift */; };
+		DB125F27207924FF003AF997 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F26207924FF003AF997 /* Networking.swift */; };
+		DB125F2920793397003AF997 /* LoginDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F2820793397003AF997 /* LoginDelegates.swift */; };
+		DB125F2B2079399C003AF997 /* DataRestrictionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F2A2079399C003AF997 /* DataRestrictionCheck.swift */; };
+		DB125F2D20793A89003AF997 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F2C20793A89003AF997 /* Alerts.swift */; };
+		DB125F2F20793ED9003AF997 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB125F2E20793ED9003AF997 /* HomeTabBarController.swift */; };
+		DB150F2420946D4400BB38F1 /* GroupApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F2320946D4400BB38F1 /* GroupApiInteraction.swift */; };
+		DB150F27209476DC00BB38F1 /* GroupChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F26209476DC00BB38F1 /* GroupChatController.swift */; };
+		DB150F292094774E00BB38F1 /* GroupChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F282094774E00BB38F1 /* GroupChatCell.swift */; };
+		DB150F2B20947C5100BB38F1 /* GroupChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F2A20947C5100BB38F1 /* GroupChatDelegate.swift */; };
+		DB150F2D209493B600BB38F1 /* GroupChatApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F2C209493B600BB38F1 /* GroupChatApiInteraction.swift */; };
+		DB150F2F2094A33500BB38F1 /* ReplyToConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F2E2094A33500BB38F1 /* ReplyToConversationController.swift */; };
+		DB150F322094AB1A00BB38F1 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F312094AB1A00BB38F1 /* CommentsView.swift */; };
+		DB150F342094AC6C00BB38F1 /* ReplyToConversationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F332094AC6C00BB38F1 /* ReplyToConversationDelegate.swift */; };
+		DB150F362094AC7A00BB38F1 /* ReplyToConverationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F352094AC7A00BB38F1 /* ReplyToConverationCell.swift */; };
+		DB150F392094D73F00BB38F1 /* NewConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F382094D73F00BB38F1 /* NewConversationController.swift */; };
+		DB150F3B2094D7AC00BB38F1 /* CameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F3A2094D7AC00BB38F1 /* CameraPhotoView.swift */; };
+		DB150F3D2094DFB300BB38F1 /* NewConversationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F3C2094DFB300BB38F1 /* NewConversationDelegate.swift */; };
+		DB150F3F2094E3D000BB38F1 /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F3E2094E3D000BB38F1 /* NewConversationCell.swift */; };
+		DB150F412094FC4600BB38F1 /* CustomPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB150F402094FC4600BB38F1 /* CustomPopUp.swift */; };
+		DB15B7362079CEDF00CFF636 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B7352079CEDF00CFF636 /* ProjectController.swift */; };
+		DB15B7392079D54000CFF636 /* ProjectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B7382079D54000CFF636 /* ProjectDelegate.swift */; };
+		DB15B73C2079D6D100CFF636 /* AddTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B73B2079D6D100CFF636 /* AddTimeController.swift */; };
+		DB15B73E2079D73600CFF636 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B73D2079D73600CFF636 /* CardView.swift */; };
+		DB15B7402079D79F00CFF636 /* AddTimeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B73F2079D79F00CFF636 /* AddTimeViews.swift */; };
+		DB15B7422079DBAC00CFF636 /* TextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15B7412079DBAC00CFF636 /* TextButtonView.swift */; };
+		DB1BAA4720867F8B008BFFFD /* AddTimeApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BAA4620867F8B008BFFFD /* AddTimeApiInteraction.swift */; };
+		DB1BAA4920868043008BFFFD /* AddTimeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1BAA4820868043008BFFFD /* AddTimeDelegate.swift */; };
+		DB2C8BAE20AB74A80057BDC5 /* GroupCommentDeletePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C8BAD20AB74A80057BDC5 /* GroupCommentDeletePopUp.swift */; };
+		DB3FF26E20D76DF500AB77CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3FF26D20D76DF500AB77CB /* SettingsViewController.swift */; };
+		DB3FF27020D76EB400AB77CB /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3FF26F20D76EB400AB77CB /* SettingsViews.swift */; };
+		DB5C5F3820C7C8230051FEAD /* GroupsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C5F3720C7C8230051FEAD /* GroupsHeaderView.swift */; };
+		DB7B6ECF208A7431002013F5 /* EditProjectTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7B6ECE208A7431002013F5 /* EditProjectTaskController.swift */; };
+		DB8998F0208F9BBE002EF7FD /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998EF208F9BBE002EF7FD /* GroupsController.swift */; };
+		DB8998F2208F9C33002EF7FD /* GroupsDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998F1208F9C33002EF7FD /* GroupsDelegates.swift */; };
+		DB8998F4208F9C60002EF7FD /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998F3208F9C60002EF7FD /* GroupsCell.swift */; };
+		DB8998F6208F9F58002EF7FD /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998F5208F9F58002EF7FD /* ForgetPasswordView.swift */; };
+		DB8998F9208FAB39002EF7FD /* ForgotPasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998F8208FAB39002EF7FD /* ForgotPasswordDelegate.swift */; };
+		DB8998FB208FAB5A002EF7FD /* ForgotPasswordApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998FA208FAB5A002EF7FD /* ForgotPasswordApiInteraction.swift */; };
+		DB8998FD208FB1D7002EF7FD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998FC208FB1D7002EF7FD /* CalendarView.swift */; };
+		DB899900208FB81E002EF7FD /* CalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8998FF208FB81E002EF7FD /* CalendarViewDelegate.swift */; };
+		DB899902208FB8EB002EF7FD /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB899901208FB8EB002EF7FD /* CalendarCell.swift */; };
+		DB89BF5920901E790035936E /* CalendarViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89BF5820901E790035936E /* CalendarViewHeader.swift */; };
+		DB8FEFB5207BDF1900D1C9FA /* ProjectTopCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FEFB4207BDF1900D1C9FA /* ProjectTopCollectionView.swift */; };
+		DB8FEFB7207BE0B800D1C9FA /* ProjectControllerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FEFB6207BE0B800D1C9FA /* ProjectControllerCollectionCell.swift */; };
+		DBA10F5220BA9BD200A18F38 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5120BA9BD200A18F38 /* SignupController.swift */; };
+		DBA10F5420BA9D6A00A18F38 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5320BA9D6A00A18F38 /* SignUpView.swift */; };
+		DBA10F5620BA9D9D00A18F38 /* SignUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5520BA9D9D00A18F38 /* SignUpCell.swift */; };
+		DBA10F5820BA9F0F00A18F38 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5720BA9F0F00A18F38 /* SignupDelegate.swift */; };
+		DBA10F5B20BAA7BE00A18F38 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5A20BAA7BE00A18F38 /* Enums.swift */; };
+		DBA10F5E20BAAB0700A18F38 /* ViewAllProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5D20BAAB0700A18F38 /* ViewAllProjects.swift */; };
+		DBA10F6020BAAB1700A18F38 /* ViewAllProjectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F5F20BAAB1700A18F38 /* ViewAllProjectDelegate.swift */; };
+		DBA10F6220BAB6F000A18F38 /* ViewAllProjectApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F6120BAB6F000A18F38 /* ViewAllProjectApiInteraction.swift */; };
+		DBA10F6520BB3F4700A18F38 /* ViewProjectInDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F6420BB3F4700A18F38 /* ViewProjectInDetail.swift */; };
+		DBA10F6720BB3FB000A18F38 /* ViewProjectInDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F6620BB3FB000A18F38 /* ViewProjectInDetailDelegate.swift */; };
+		DBA10F6920BB405500A18F38 /* ViewProjectInDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA10F6820BB405500A18F38 /* ViewProjectInDetailCell.swift */; };
+		DBB2B41D20811B2B002CA508 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2B41C20811B2B002CA508 /* ProfileController.swift */; };
+		DBB2B41F20811C28002CA508 /* ProfileDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2B41E20811C28002CA508 /* ProfileDelegates.swift */; };
+		DBB2B42120811C66002CA508 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2B42020811C66002CA508 /* ProfileCell.swift */; };
+		DBB2E7D420924F5C00F3DF50 /* SaveDataToPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2E7D320924F5C00F3DF50 /* SaveDataToPlist.swift */; };
+		DBBB41B520959DE200F12BD1 /* EditprofileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB41B420959DE200F12BD1 /* EditprofileController.swift */; };
+		DBBB41B720959EBB00F12BD1 /* EditProfileApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB41B620959EBB00F12BD1 /* EditProfileApiInteraction.swift */; };
+		DBC06D5620A70CCB00563D72 /* NewConversationApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06D5520A70CCB00563D72 /* NewConversationApiInteraction.swift */; };
+		DBC06D5820A7801500563D72 /* SeenByPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06D5720A7801500563D72 /* SeenByPopUp.swift */; };
+		DBC5D29C207FE43600C1B660 /* ReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC5D29B207FE43600C1B660 /* ReportController.swift */; };
+		DBDFC22520CCEE51001DD03C /* CreateSubgroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFC22420CCEE51001DD03C /* CreateSubgroupController.swift */; };
+		DBDFC22720CCEF73001DD03C /* CreateSubgroupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFC22620CCEF73001DD03C /* CreateSubgroupViews.swift */; };
+		DBDFC22920CCF054001DD03C /* CreateSubgroupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFC22820CCF054001DD03C /* CreateSubgroupDelegate.swift */; };
+		DBDFC22B20CCF098001DD03C /* CreateSubgroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFC22A20CCF098001DD03C /* CreateSubgroupCell.swift */; };
+		DBEAF47920A2325500AF63C2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAF47820A2325500AF63C2 /* ActivityIndicatorView.swift */; };
+		DBF2713120837B3D00A5BBC3 /* ProjectApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2713020837B3D00A5BBC3 /* ProjectApiInteraction.swift */; };
+		DBF271332083879700A5BBC3 /* LogicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF271322083879700A5BBC3 /* LogicHelper.swift */; };
+		DBF2E200209DA993002B6B47 /* ProjectAsssignCustomPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2E1FF209DA993002B6B47 /* ProjectAsssignCustomPop.swift */; };
+		DBFAFEFC20BC98C50066191B /* SignUpApiInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAFEFB20BC98C50066191B /* SignUpApiInteraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94B954EB20BE742000CC6A63 /* ReplToGalleryCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplToGalleryCameraView.swift; sourceTree = "<group>"; };
+		94D0D756209AE6410071BB4A /* HourMinutesPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourMinutesPopUp.swift; sourceTree = "<group>"; };
+		94D0D759209AEA0A0071BB4A /* ProtocolCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolCommunication.swift; sourceTree = "<group>"; };
+		94D0D763209B18C80071BB4A /* EditProjectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectDelegate.swift; sourceTree = "<group>"; };
+		94D0D765209B18E60071BB4A /* EditProjectViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectViews.swift; sourceTree = "<group>"; };
+		94D0D767209B22890071BB4A /* ProjectAssignPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAssignPopUp.swift; sourceTree = "<group>"; };
+		94D0D769209B28920071BB4A /* EditProjectApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectApiInteraction.swift; sourceTree = "<group>"; };
+		94D2317E209ADF050078116C /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		94D23180209AE2030078116C /* ProjectPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPopUp.swift; sourceTree = "<group>"; };
+		C38E965CCD14879CD0528944 /* Pods-CameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CameraApp/Pods-CameraApp.release.xcconfig"; sourceTree = "<group>"; };
+		D91CEC7EB23D5C394D7162A5 /* Pods-CameraApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CameraApp/Pods-CameraApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0A63E120D7C83E004D7884 /* SettingsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDelegate.swift; sourceTree = "<group>"; };
 		DB125EFE2078F9CD003AF997 /* CameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB125F012078F9CD003AF997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB125F032078F9CD003AF997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +125,87 @@
 		DB125F082078F9D0003AF997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB125F0B2078F9D0003AF997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB125F0D2078F9D0003AF997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB125F142078FA04003AF997 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		DB125F192078FA6B003AF997 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		DB125F1B2078FA76003AF997 /* CustomConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConstraint.swift; sourceTree = "<group>"; };
+		DB125F1D2078FAAD003AF997 /* LoginViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViews.swift; sourceTree = "<group>"; };
+		DB125F1F20790075003AF997 /* CopyrightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightView.swift; sourceTree = "<group>"; };
+		DB125F22207922B3003AF997 /* NetworkWebApis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWebApis.swift; sourceTree = "<group>"; };
+		DB125F2420792318003AF997 /* LoginApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiInteraction.swift; sourceTree = "<group>"; };
+		DB125F26207924FF003AF997 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		DB125F2820793397003AF997 /* LoginDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegates.swift; sourceTree = "<group>"; };
+		DB125F2A2079399C003AF997 /* DataRestrictionCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRestrictionCheck.swift; sourceTree = "<group>"; };
+		DB125F2C20793A89003AF997 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		DB125F2E20793ED9003AF997 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		DB150F2320946D4400BB38F1 /* GroupApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupApiInteraction.swift; sourceTree = "<group>"; };
+		DB150F26209476DC00BB38F1 /* GroupChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatController.swift; sourceTree = "<group>"; };
+		DB150F282094774E00BB38F1 /* GroupChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatCell.swift; sourceTree = "<group>"; };
+		DB150F2A20947C5100BB38F1 /* GroupChatDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatDelegate.swift; sourceTree = "<group>"; };
+		DB150F2C209493B600BB38F1 /* GroupChatApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatApiInteraction.swift; sourceTree = "<group>"; };
+		DB150F2E2094A33500BB38F1 /* ReplyToConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyToConversationController.swift; sourceTree = "<group>"; };
+		DB150F312094AB1A00BB38F1 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		DB150F332094AC6C00BB38F1 /* ReplyToConversationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyToConversationDelegate.swift; sourceTree = "<group>"; };
+		DB150F352094AC7A00BB38F1 /* ReplyToConverationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyToConverationCell.swift; sourceTree = "<group>"; };
+		DB150F382094D73F00BB38F1 /* NewConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationController.swift; sourceTree = "<group>"; };
+		DB150F3A2094D7AC00BB38F1 /* CameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoView.swift; sourceTree = "<group>"; };
+		DB150F3C2094DFB300BB38F1 /* NewConversationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationDelegate.swift; sourceTree = "<group>"; };
+		DB150F3E2094E3D000BB38F1 /* NewConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
+		DB150F402094FC4600BB38F1 /* CustomPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUp.swift; sourceTree = "<group>"; };
+		DB15B7352079CEDF00CFF636 /* ProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
+		DB15B7382079D54000CFF636 /* ProjectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDelegate.swift; sourceTree = "<group>"; };
+		DB15B73B2079D6D100CFF636 /* AddTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeController.swift; sourceTree = "<group>"; };
+		DB15B73D2079D73600CFF636 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DB15B73F2079D79F00CFF636 /* AddTimeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeViews.swift; sourceTree = "<group>"; };
+		DB15B7412079DBAC00CFF636 /* TextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonView.swift; sourceTree = "<group>"; };
+		DB1BAA4620867F8B008BFFFD /* AddTimeApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeApiInteraction.swift; sourceTree = "<group>"; };
+		DB1BAA4820868043008BFFFD /* AddTimeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeDelegate.swift; sourceTree = "<group>"; };
+		DB2C8BAD20AB74A80057BDC5 /* GroupCommentDeletePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCommentDeletePopUp.swift; sourceTree = "<group>"; };
+		DB3FF26D20D76DF500AB77CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DB3FF26F20D76EB400AB77CB /* SettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
+		DB5C5F3720C7C8230051FEAD /* GroupsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsHeaderView.swift; sourceTree = "<group>"; };
+		DB7B6ECE208A7431002013F5 /* EditProjectTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectTaskController.swift; sourceTree = "<group>"; };
+		DB8998EF208F9BBE002EF7FD /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
+		DB8998F1208F9C33002EF7FD /* GroupsDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDelegates.swift; sourceTree = "<group>"; };
+		DB8998F3208F9C60002EF7FD /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
+		DB8998F5208F9F58002EF7FD /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		DB8998F8208FAB39002EF7FD /* ForgotPasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordDelegate.swift; sourceTree = "<group>"; };
+		DB8998FA208FAB5A002EF7FD /* ForgotPasswordApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordApiInteraction.swift; sourceTree = "<group>"; };
+		DB8998FC208FB1D7002EF7FD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		DB8998FF208FB81E002EF7FD /* CalendarViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewDelegate.swift; sourceTree = "<group>"; };
+		DB899901208FB8EB002EF7FD /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		DB89BF5820901E790035936E /* CalendarViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewHeader.swift; sourceTree = "<group>"; };
+		DB8FEFB4207BDF1900D1C9FA /* ProjectTopCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTopCollectionView.swift; sourceTree = "<group>"; };
+		DB8FEFB6207BE0B800D1C9FA /* ProjectControllerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectControllerCollectionCell.swift; sourceTree = "<group>"; };
+		DBA10F5120BA9BD200A18F38 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		DBA10F5320BA9D6A00A18F38 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DBA10F5520BA9D9D00A18F38 /* SignUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCell.swift; sourceTree = "<group>"; };
+		DBA10F5720BA9F0F00A18F38 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
+		DBA10F5A20BAA7BE00A18F38 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		DBA10F5D20BAAB0700A18F38 /* ViewAllProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllProjects.swift; sourceTree = "<group>"; };
+		DBA10F5F20BAAB1700A18F38 /* ViewAllProjectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllProjectDelegate.swift; sourceTree = "<group>"; };
+		DBA10F6120BAB6F000A18F38 /* ViewAllProjectApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllProjectApiInteraction.swift; sourceTree = "<group>"; };
+		DBA10F6420BB3F4700A18F38 /* ViewProjectInDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectInDetail.swift; sourceTree = "<group>"; };
+		DBA10F6620BB3FB000A18F38 /* ViewProjectInDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectInDetailDelegate.swift; sourceTree = "<group>"; };
+		DBA10F6820BB405500A18F38 /* ViewProjectInDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectInDetailCell.swift; sourceTree = "<group>"; };
+		DBB2B41C20811B2B002CA508 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		DBB2B41E20811C28002CA508 /* ProfileDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegates.swift; sourceTree = "<group>"; };
+		DBB2B42020811C66002CA508 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		DBB2E7D320924F5C00F3DF50 /* SaveDataToPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataToPlist.swift; sourceTree = "<group>"; };
+		DBBB41B420959DE200F12BD1 /* EditprofileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditprofileController.swift; sourceTree = "<group>"; };
+		DBBB41B620959EBB00F12BD1 /* EditProfileApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileApiInteraction.swift; sourceTree = "<group>"; };
+		DBC06D5520A70CCB00563D72 /* NewConversationApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationApiInteraction.swift; sourceTree = "<group>"; };
+		DBC06D5720A7801500563D72 /* SeenByPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenByPopUp.swift; sourceTree = "<group>"; };
+		DBC5D29B207FE43600C1B660 /* ReportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportController.swift; sourceTree = "<group>"; };
+		DBDFC22420CCEE51001DD03C /* CreateSubgroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubgroupController.swift; sourceTree = "<group>"; };
+		DBDFC22620CCEF73001DD03C /* CreateSubgroupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubgroupViews.swift; sourceTree = "<group>"; };
+		DBDFC22820CCF054001DD03C /* CreateSubgroupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubgroupDelegate.swift; sourceTree = "<group>"; };
+		DBDFC22A20CCF098001DD03C /* CreateSubgroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubgroupCell.swift; sourceTree = "<group>"; };
+		DBEAF47820A2325500AF63C2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		DBF2713020837B3D00A5BBC3 /* ProjectApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectApiInteraction.swift; sourceTree = "<group>"; };
+		DBF271322083879700A5BBC3 /* LogicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicHelper.swift; sourceTree = "<group>"; };
+		DBF2E1FF209DA993002B6B47 /* ProjectAsssignCustomPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAsssignCustomPop.swift; sourceTree = "<group>"; };
+		DBFAFEFB20BC98C50066191B /* SignUpApiInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpApiInteraction.swift; sourceTree = "<group>"; };
+		E6B63D5FAF73BF42AE315D7F /* Pods_CameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +213,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ADFA346BB923ACA300FAE4 /* Pods_CameraApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94D0D758209AE9FA0071BB4A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94D0D759209AEA0A0071BB4A /* ProtocolCommunication.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94D0D762209B18B40071BB4A /* Edit Project */ = {
+			isa = PBXGroup;
+			children = (
+				DB7B6ECE208A7431002013F5 /* EditProjectTaskController.swift */,
+				94D0D763209B18C80071BB4A /* EditProjectDelegate.swift */,
+				94D0D765209B18E60071BB4A /* EditProjectViews.swift */,
+				94D0D769209B28920071BB4A /* EditProjectApiInteraction.swift */,
+			);
+			path = "Edit Project";
+			sourceTree = "<group>";
+		};
+		94D2317D209ADED80078116C /* Camera Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94D2317E209ADF050078116C /* CameraController.swift */,
+			);
+			path = "Camera Controller";
+			sourceTree = "<group>";
+		};
+		94D23182209AE2090078116C /* Pop Ups */ = {
+			isa = PBXGroup;
+			children = (
+				94D23180209AE2030078116C /* ProjectPopUp.swift */,
+				94D0D756209AE6410071BB4A /* HourMinutesPopUp.swift */,
+				94D0D767209B22890071BB4A /* ProjectAssignPopUp.swift */,
+				DBF2E1FF209DA993002B6B47 /* ProjectAsssignCustomPop.swift */,
+				DBC06D5720A7801500563D72 /* SeenByPopUp.swift */,
+				DB2C8BAD20AB74A80057BDC5 /* GroupCommentDeletePopUp.swift */,
+			);
+			path = "Pop Ups";
+			sourceTree = "<group>";
+		};
+		C37BAE1FA26E99CDE2B19377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D91CEC7EB23D5C394D7162A5 /* Pods-CameraApp.debug.xcconfig */,
+				C38E965CCD14879CD0528944 /* Pods-CameraApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DB125EF52078F9CD003AF997 = {
 			isa = PBXGroup;
 			children = (
 				DB125F002078F9CD003AF997 /* CameraApp */,
 				DB125EFF2078F9CD003AF997 /* Products */,
+				C37BAE1FA26E99CDE2B19377 /* Pods */,
+				E5C841E7B447DA918781CF7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +290,12 @@
 		DB125F002078F9CD003AF997 /* CameraApp */ = {
 			isa = PBXGroup;
 			children = (
+				DBA10F5020BA9BC100A18F38 /* Sign Up */,
+				94D2317D209ADED80078116C /* Camera Controller */,
+				DB15B7342079CEC500CFF636 /* MainTabBarController */,
+				DB125F212079229E003AF997 /* Networking */,
+				DB125F182078FA5D003AF997 /* Additional */,
+				DB125F132078F9F6003AF997 /* Login */,
 				DB125F012078F9CD003AF997 /* AppDelegate.swift */,
 				DB125F032078F9CD003AF997 /* ViewController.swift */,
 				DB125F052078F9CD003AF997 /* Main.storyboard */,
@@ -64,6 +306,258 @@
 			path = CameraApp;
 			sourceTree = "<group>";
 		};
+		DB125F132078F9F6003AF997 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB8998F7208FAB1B002EF7FD /* Forgot Password */,
+				DB125F142078FA04003AF997 /* LoginController.swift */,
+				DB125F1D2078FAAD003AF997 /* LoginViews.swift */,
+				DB125F1F20790075003AF997 /* CopyrightView.swift */,
+				DB125F2420792318003AF997 /* LoginApiInteraction.swift */,
+				DB125F2820793397003AF997 /* LoginDelegates.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DB125F182078FA5D003AF997 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F5920BAA7AF00A18F38 /* Enums */,
+				94D0D758209AE9FA0071BB4A /* Protocols */,
+				94D23182209AE2090078116C /* Pop Ups */,
+				DB8998FE208FB807002EF7FD /* Calendard View */,
+				DB125F192078FA6B003AF997 /* CustomViews.swift */,
+				DB125F1B2078FA76003AF997 /* CustomConstraint.swift */,
+				DB125F2A2079399C003AF997 /* DataRestrictionCheck.swift */,
+				DB125F2C20793A89003AF997 /* Alerts.swift */,
+				DB15B73D2079D73600CFF636 /* CardView.swift */,
+				DBF271322083879700A5BBC3 /* LogicHelper.swift */,
+				DBB2E7D320924F5C00F3DF50 /* SaveDataToPlist.swift */,
+				DB150F402094FC4600BB38F1 /* CustomPopUp.swift */,
+				DBEAF47820A2325500AF63C2 /* ActivityIndicatorView.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		DB125F212079229E003AF997 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DB125F22207922B3003AF997 /* NetworkWebApis.swift */,
+				DB125F26207924FF003AF997 /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DB150F25209476C900BB38F1 /* Group Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DB150F26209476DC00BB38F1 /* GroupChatController.swift */,
+				DB150F282094774E00BB38F1 /* GroupChatCell.swift */,
+				DB150F2A20947C5100BB38F1 /* GroupChatDelegate.swift */,
+				DB150F2C209493B600BB38F1 /* GroupChatApiInteraction.swift */,
+			);
+			path = "Group Chat";
+			sourceTree = "<group>";
+		};
+		DB150F302094AAC900BB38F1 /* Reply On Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				DB150F2E2094A33500BB38F1 /* ReplyToConversationController.swift */,
+				DB150F312094AB1A00BB38F1 /* CommentsView.swift */,
+				DB150F332094AC6C00BB38F1 /* ReplyToConversationDelegate.swift */,
+				DB150F352094AC7A00BB38F1 /* ReplyToConverationCell.swift */,
+				94B954EB20BE742000CC6A63 /* ReplToGalleryCameraView.swift */,
+			);
+			path = "Reply On Conversation";
+			sourceTree = "<group>";
+		};
+		DB150F372094D72D00BB38F1 /* New Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				DB150F382094D73F00BB38F1 /* NewConversationController.swift */,
+				DB150F3A2094D7AC00BB38F1 /* CameraPhotoView.swift */,
+				DB150F3C2094DFB300BB38F1 /* NewConversationDelegate.swift */,
+				DB150F3E2094E3D000BB38F1 /* NewConversationCell.swift */,
+				DBC06D5520A70CCB00563D72 /* NewConversationApiInteraction.swift */,
+			);
+			path = "New Conversation";
+			sourceTree = "<group>";
+		};
+		DB15B7342079CEC500CFF636 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2B41B20811B1C002CA508 /* Profile */,
+				DBC5D29A207FE42300C1B660 /* New Group */,
+				DB15B7372079D52E00CFF636 /* Project */,
+				DB125F2E20793ED9003AF997 /* HomeTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		DB15B7372079D52E00CFF636 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F5C20BAAAF600A18F38 /* View All Projects */,
+				94D0D762209B18B40071BB4A /* Edit Project */,
+				DB15B7352079CEDF00CFF636 /* ProjectController.swift */,
+				DB8FEFB6207BE0B800D1C9FA /* ProjectControllerCollectionCell.swift */,
+				DB8FEFB4207BDF1900D1C9FA /* ProjectTopCollectionView.swift */,
+				DB15B7382079D54000CFF636 /* ProjectDelegate.swift */,
+				DBF2713020837B3D00A5BBC3 /* ProjectApiInteraction.swift */,
+				DB15B73A2079D6C400CFF636 /* AddTime */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		DB15B73A2079D6C400CFF636 /* AddTime */ = {
+			isa = PBXGroup;
+			children = (
+				DB15B73B2079D6D100CFF636 /* AddTimeController.swift */,
+				DB15B73F2079D79F00CFF636 /* AddTimeViews.swift */,
+				DB15B7412079DBAC00CFF636 /* TextButtonView.swift */,
+				DB1BAA4620867F8B008BFFFD /* AddTimeApiInteraction.swift */,
+				DB1BAA4820868043008BFFFD /* AddTimeDelegate.swift */,
+			);
+			path = AddTime;
+			sourceTree = "<group>";
+		};
+		DB3FF26C20D76DDF00AB77CB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DB3FF26D20D76DF500AB77CB /* SettingsViewController.swift */,
+				DB3FF26F20D76EB400AB77CB /* SettingsViews.swift */,
+				DB0A63E120D7C83E004D7884 /* SettingsDelegate.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DB8998EE208F9BA0002EF7FD /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				DBDFC22320CCEE36001DD03C /* Create Subgroup */,
+				DB150F372094D72D00BB38F1 /* New Conversation */,
+				DB150F302094AAC900BB38F1 /* Reply On Conversation */,
+				DB150F25209476C900BB38F1 /* Group Chat */,
+				DB8998EF208F9BBE002EF7FD /* GroupsController.swift */,
+				DB8998F1208F9C33002EF7FD /* GroupsDelegates.swift */,
+				DB8998F3208F9C60002EF7FD /* GroupsCell.swift */,
+				DB150F2320946D4400BB38F1 /* GroupApiInteraction.swift */,
+				DB5C5F3720C7C8230051FEAD /* GroupsHeaderView.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		DB8998F7208FAB1B002EF7FD /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				DB8998F5208F9F58002EF7FD /* ForgetPasswordView.swift */,
+				DB8998F8208FAB39002EF7FD /* ForgotPasswordDelegate.swift */,
+				DB8998FA208FAB5A002EF7FD /* ForgotPasswordApiInteraction.swift */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		DB8998FE208FB807002EF7FD /* Calendard View */ = {
+			isa = PBXGroup;
+			children = (
+				DB8998FC208FB1D7002EF7FD /* CalendarView.swift */,
+				DB8998FF208FB81E002EF7FD /* CalendarViewDelegate.swift */,
+				DB899901208FB8EB002EF7FD /* CalendarCell.swift */,
+				DB89BF5820901E790035936E /* CalendarViewHeader.swift */,
+			);
+			path = "Calendard View";
+			sourceTree = "<group>";
+		};
+		DBA10F5020BA9BC100A18F38 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F5120BA9BD200A18F38 /* SignupController.swift */,
+				DBA10F5320BA9D6A00A18F38 /* SignUpView.swift */,
+				DBA10F5520BA9D9D00A18F38 /* SignUpCell.swift */,
+				DBA10F5720BA9F0F00A18F38 /* SignupDelegate.swift */,
+				DBFAFEFB20BC98C50066191B /* SignUpApiInteraction.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		DBA10F5920BAA7AF00A18F38 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F5A20BAA7BE00A18F38 /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		DBA10F5C20BAAAF600A18F38 /* View All Projects */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F6320BB3F3200A18F38 /* ViewProjectInDetail */,
+				DBA10F5D20BAAB0700A18F38 /* ViewAllProjects.swift */,
+				DBA10F5F20BAAB1700A18F38 /* ViewAllProjectDelegate.swift */,
+				DBA10F6120BAB6F000A18F38 /* ViewAllProjectApiInteraction.swift */,
+			);
+			path = "View All Projects";
+			sourceTree = "<group>";
+		};
+		DBA10F6320BB3F3200A18F38 /* ViewProjectInDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DBA10F6420BB3F4700A18F38 /* ViewProjectInDetail.swift */,
+				DBA10F6620BB3FB000A18F38 /* ViewProjectInDetailDelegate.swift */,
+				DBA10F6820BB405500A18F38 /* ViewProjectInDetailCell.swift */,
+			);
+			path = ViewProjectInDetail;
+			sourceTree = "<group>";
+		};
+		DBB2B41B20811B1C002CA508 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB3FF26C20D76DDF00AB77CB /* Settings */,
+				DBBB41B320959DD000F12BD1 /* Edit Profile */,
+				DB8998EE208F9BA0002EF7FD /* Groups */,
+				DBB2B41C20811B2B002CA508 /* ProfileController.swift */,
+				DBB2B41E20811C28002CA508 /* ProfileDelegates.swift */,
+				DBB2B42020811C66002CA508 /* ProfileCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DBBB41B320959DD000F12BD1 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB41B420959DE200F12BD1 /* EditprofileController.swift */,
+				DBBB41B620959EBB00F12BD1 /* EditProfileApiInteraction.swift */,
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		DBC5D29A207FE42300C1B660 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				DBC5D29B207FE43600C1B660 /* ReportController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		DBDFC22320CCEE36001DD03C /* Create Subgroup */ = {
+			isa = PBXGroup;
+			children = (
+				DBDFC22420CCEE51001DD03C /* CreateSubgroupController.swift */,
+				DBDFC22620CCEF73001DD03C /* CreateSubgroupViews.swift */,
+				DBDFC22820CCF054001DD03C /* CreateSubgroupDelegate.swift */,
+				DBDFC22A20CCF098001DD03C /* CreateSubgroupCell.swift */,
+			);
+			path = "Create Subgroup";
+			sourceTree = "<group>";
+		};
+		E5C841E7B447DA918781CF7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6B63D5FAF73BF42AE315D7F /* Pods_CameraApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +565,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB125F102078F9D0003AF997 /* Build configuration list for PBXNativeTarget "CameraApp" */;
 			buildPhases = (
+				0CC224094120B159FFB9E8F0 /* [CP] Check Pods Manifest.lock */,
 				DB125EFA2078F9CD003AF997 /* Sources */,
 				DB125EFB2078F9CD003AF997 /* Frameworks */,
 				DB125EFC2078F9CD003AF997 /* Resources */,
+				80C42836788C196F9E7C638D /* [CP] Embed Pods Frameworks */,
+				DB28400520A8CE95006DF484 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,20 +620,176 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB125F0C2078F9D0003AF997 /* LaunchScreen.storyboard in Resources */,
-				DB125F092078F9D0003AF997 /* Assets.xcassets in Resources */,
+				DB01B85E20D19E6F00C09DA4 /* Assets.xcassets in Resources */,
 				DB125F072078F9CD003AF997 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CC224094120B159FFB9E8F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CameraApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80C42836788C196F9E7C638D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CameraApp/Pods-CameraApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BiometricAuthentication/BiometricAuthentication.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BiometricAuthentication.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CameraApp/Pods-CameraApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB28400520A8CE95006DF484 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 097b557370ce2358f737c0c6174acc72a34f5903 2821f9e8a34672d73afcb5e19d29c9e1d1fb8a502a4efb5a7abde0b4bea437e5";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB125EFA2078F9CD003AF997 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D23181209AE2030078116C /* ProjectPopUp.swift in Sources */,
+				DBFAFEFC20BC98C50066191B /* SignUpApiInteraction.swift in Sources */,
+				DB125F1C2078FA76003AF997 /* CustomConstraint.swift in Sources */,
+				DB1BAA4920868043008BFFFD /* AddTimeDelegate.swift in Sources */,
+				94D0D757209AE6410071BB4A /* HourMinutesPopUp.swift in Sources */,
+				DBDFC22920CCF054001DD03C /* CreateSubgroupDelegate.swift in Sources */,
+				DB150F362094AC7A00BB38F1 /* ReplyToConverationCell.swift in Sources */,
+				DBA10F5820BA9F0F00A18F38 /* SignupDelegate.swift in Sources */,
+				DBDFC22B20CCF098001DD03C /* CreateSubgroupCell.swift in Sources */,
+				DB125F27207924FF003AF997 /* Networking.swift in Sources */,
+				DBDFC22720CCEF73001DD03C /* CreateSubgroupViews.swift in Sources */,
+				DB15B7392079D54000CFF636 /* ProjectDelegate.swift in Sources */,
+				DB89BF5920901E790035936E /* CalendarViewHeader.swift in Sources */,
+				DB150F27209476DC00BB38F1 /* GroupChatController.swift in Sources */,
+				DB8998F2208F9C33002EF7FD /* GroupsDelegates.swift in Sources */,
+				DBF2713120837B3D00A5BBC3 /* ProjectApiInteraction.swift in Sources */,
+				DBA10F5620BA9D9D00A18F38 /* SignUpCell.swift in Sources */,
+				DB0A63E220D7C83E004D7884 /* SettingsDelegate.swift in Sources */,
+				DB150F2D209493B600BB38F1 /* GroupChatApiInteraction.swift in Sources */,
+				DB1BAA4720867F8B008BFFFD /* AddTimeApiInteraction.swift in Sources */,
+				DB2C8BAE20AB74A80057BDC5 /* GroupCommentDeletePopUp.swift in Sources */,
+				DBA10F5420BA9D6A00A18F38 /* SignUpView.swift in Sources */,
+				DB125F2F20793ED9003AF997 /* HomeTabBarController.swift in Sources */,
+				DBA10F5B20BAA7BE00A18F38 /* Enums.swift in Sources */,
+				DB125F2520792318003AF997 /* LoginApiInteraction.swift in Sources */,
+				DB125F2B2079399C003AF997 /* DataRestrictionCheck.swift in Sources */,
+				DB150F322094AB1A00BB38F1 /* CommentsView.swift in Sources */,
+				DB8998F6208F9F58002EF7FD /* ForgetPasswordView.swift in Sources */,
+				DB15B7362079CEDF00CFF636 /* ProjectController.swift in Sources */,
+				DB150F2420946D4400BB38F1 /* GroupApiInteraction.swift in Sources */,
+				DB150F3B2094D7AC00BB38F1 /* CameraPhotoView.swift in Sources */,
+				DB8998FD208FB1D7002EF7FD /* CalendarView.swift in Sources */,
+				DBBB41B520959DE200F12BD1 /* EditprofileController.swift in Sources */,
+				DB150F3F2094E3D000BB38F1 /* NewConversationCell.swift in Sources */,
+				DB125F2920793397003AF997 /* LoginDelegates.swift in Sources */,
+				DB15B73C2079D6D100CFF636 /* AddTimeController.swift in Sources */,
+				DBB2E7D420924F5C00F3DF50 /* SaveDataToPlist.swift in Sources */,
+				DBF271332083879700A5BBC3 /* LogicHelper.swift in Sources */,
+				94D0D766209B18E60071BB4A /* EditProjectViews.swift in Sources */,
+				DBF2E200209DA993002B6B47 /* ProjectAsssignCustomPop.swift in Sources */,
+				DB8FEFB7207BE0B800D1C9FA /* ProjectControllerCollectionCell.swift in Sources */,
+				DBC5D29C207FE43600C1B660 /* ReportController.swift in Sources */,
+				94B954EC20BE742000CC6A63 /* ReplToGalleryCameraView.swift in Sources */,
+				DB150F3D2094DFB300BB38F1 /* NewConversationDelegate.swift in Sources */,
+				DBA10F6220BAB6F000A18F38 /* ViewAllProjectApiInteraction.swift in Sources */,
+				DB150F2B20947C5100BB38F1 /* GroupChatDelegate.swift in Sources */,
+				DBA10F6920BB405500A18F38 /* ViewProjectInDetailCell.swift in Sources */,
+				DB150F292094774E00BB38F1 /* GroupChatCell.swift in Sources */,
 				DB125F042078F9CD003AF997 /* ViewController.swift in Sources */,
+				DB3FF27020D76EB400AB77CB /* SettingsViews.swift in Sources */,
+				DB15B73E2079D73600CFF636 /* CardView.swift in Sources */,
+				DB5C5F3820C7C8230051FEAD /* GroupsHeaderView.swift in Sources */,
+				DBB2B42120811C66002CA508 /* ProfileCell.swift in Sources */,
+				DB150F2F2094A33500BB38F1 /* ReplyToConversationController.swift in Sources */,
+				DBBB41B720959EBB00F12BD1 /* EditProfileApiInteraction.swift in Sources */,
+				DB3FF26E20D76DF500AB77CB /* SettingsViewController.swift in Sources */,
+				94D0D768209B22890071BB4A /* ProjectAssignPopUp.swift in Sources */,
+				DB7B6ECF208A7431002013F5 /* EditProjectTaskController.swift in Sources */,
+				DB150F412094FC4600BB38F1 /* CustomPopUp.swift in Sources */,
+				DB125F1E2078FAAD003AF997 /* LoginViews.swift in Sources */,
+				DB125F1A2078FA6C003AF997 /* CustomViews.swift in Sources */,
+				DB8998F0208F9BBE002EF7FD /* GroupsController.swift in Sources */,
+				DBA10F5E20BAAB0700A18F38 /* ViewAllProjects.swift in Sources */,
+				94D0D76A209B28920071BB4A /* EditProjectApiInteraction.swift in Sources */,
+				DB8998F4208F9C60002EF7FD /* GroupsCell.swift in Sources */,
+				DB150F342094AC6C00BB38F1 /* ReplyToConversationDelegate.swift in Sources */,
+				DB125F2D20793A89003AF997 /* Alerts.swift in Sources */,
+				DBA10F5220BA9BD200A18F38 /* SignupController.swift in Sources */,
+				DB899900208FB81E002EF7FD /* CalendarViewDelegate.swift in Sources */,
+				DB125F23207922B3003AF997 /* NetworkWebApis.swift in Sources */,
+				DB125F152078FA04003AF997 /* LoginController.swift in Sources */,
+				DB125F2020790075003AF997 /* CopyrightView.swift in Sources */,
+				DB15B7402079D79F00CFF636 /* AddTimeViews.swift in Sources */,
+				DBA10F6720BB3FB000A18F38 /* ViewProjectInDetailDelegate.swift in Sources */,
+				DB150F392094D73F00BB38F1 /* NewConversationController.swift in Sources */,
+				DBA10F6520BB3F4700A18F38 /* ViewProjectInDetail.swift in Sources */,
+				94D2317F209ADF050078116C /* CameraController.swift in Sources */,
+				94D0D764209B18C80071BB4A /* EditProjectDelegate.swift in Sources */,
+				DB8998F9208FAB39002EF7FD /* ForgotPasswordDelegate.swift in Sources */,
+				DBC06D5620A70CCB00563D72 /* NewConversationApiInteraction.swift in Sources */,
+				DB8998FB208FAB5A002EF7FD /* ForgotPasswordApiInteraction.swift in Sources */,
+				DB8FEFB5207BDF1900D1C9FA /* ProjectTopCollectionView.swift in Sources */,
 				DB125F022078F9CD003AF997 /* AppDelegate.swift in Sources */,
+				DB15B7422079DBAC00CFF636 /* TextButtonView.swift in Sources */,
+				94D0D75A209AEA0A0071BB4A /* ProtocolCommunication.swift in Sources */,
+				DBB2B41D20811B2B002CA508 /* ProfileController.swift in Sources */,
+				DBDFC22520CCEE51001DD03C /* CreateSubgroupController.swift in Sources */,
+				DBA10F6020BAAB1700A18F38 /* ViewAllProjectDelegate.swift in Sources */,
+				DBC06D5820A7801500563D72 /* SeenByPopUp.swift in Sources */,
+				DBB2B41F20811C28002CA508 /* ProfileDelegates.swift in Sources */,
+				DB899902208FB8EB002EF7FD /* CalendarCell.swift in Sources */,
+				DBEAF47920A2325500AF63C2 /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,16 +931,22 @@
 		};
 		DB125F112078F9D0003AF997 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91CEC7EB23D5C394D7162A5 /* Pods-CameraApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88KV55ZTR;
 				INFOPLIST_FILE = CameraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jeevan.CameraApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameraApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,16 +954,22 @@
 		};
 		DB125F122078F9D0003AF997 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38E965CCD14879CD0528944 /* Pods-CameraApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88KV55ZTR;
 				INFOPLIST_FILE = CameraApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jeevan.CameraApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameraApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

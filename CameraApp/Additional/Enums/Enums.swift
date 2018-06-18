@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+enum SignUpEdit{
+    case EDIT
+    case SIGNUP
+}

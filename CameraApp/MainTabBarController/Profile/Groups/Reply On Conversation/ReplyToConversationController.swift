@@ -7,14 +7,60 @@
 //
 
 import UIKit
-
+import PINRemoteImage
 class ReplyToConversationController: UIViewController{
+    
+    
+    var projectId: Int?
+    var chattingCell =  ReplyToCell()
+    var repliesToChatData: [GroupChatDataModel]?
+    var groupData: GroupChatDataModel?{
+        didSet{
+            getChatData()
+            
+        }
+    }
+    
+    var subGroupId: Int?
+    
+    var currentReplyTo: GroupChatDataModel?{
+        didSet{
+           
+            replyView.replyTextField.text = UILabel().getFullName(firstName: currentReplyTo?.UserProfile?.FirstName, lastName: currentReplyTo?.UserProfile?.LastName) + " "
+        }
+    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        chattingCell.commentView.commentLbl.text = groupData?.Comment
+        chattingCell.commentView.userName.text = UILabel().getFullName(firstName: groupData?.UserProfile?.FirstName, lastName: groupData?.UserProfile?.LastName)
         
+        if let userImage = groupData?.UserProfile?.ImageUrl{
+            chattingCell.commentView.userImageView.pin_updateWithProgress = true
+            if let imageUrl = URL(string: NetworkWebApisConstant.baseUrl + userImage){
+                chattingCell.commentView.userImageView.pin_setImage(from: imageUrl)
+            }
+        }
+        
+        if let pictureArray = groupData?.File{
+            if pictureArray.count > 0 {
+            chattingCell.pictureHeightAnchor?.constant = (UIScreen.main.bounds.width - 32) * 9 / 16
+            chattingCell.pictureData = pictureArray
+            }else{
+                chattingCell.pictureHeightAnchor?.constant = 0
+            }
+        }else{
+             chattingCell.pictureHeightAnchor?.constant = 0
+        }
+
+        replyView.attachmentButton.addTarget(self, action: #selector(handleAttachment), for: .touchUpInside)
+        imagePicker.delegate = self
+        cameraGalleryView.camerButton.addTarget(self, action: #selector(handleCamera), for: .touchUpInside)
+        cameraGalleryView.galleryButton.addTarget(self, action: #selector(handleGallery), for: .touchUpInside)
+        replyView.sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +85,7 @@ class ReplyToConversationController: UIViewController{
         
         view.addSubview(cardView)
         view.addSubview(replyView)
-        view.addSubview(commentView)
+        view.addSubview(replyTableView)
         
         
         cardView.anchorWithConstantsToTop(top: view.topAnchor, left: view.leftAnchor, bottom: replyView.topAnchor, right: view.rightAnchor, topConstant: 16, leftConstant: 16, bottomConstant: -10, rightConstant: 16)
@@ -55,15 +101,49 @@ class ReplyToConversationController: UIViewController{
         replyView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07).isActive = true
         
         
-        cardView.addSubview(commentView)
-        commentView.anchorWithConstantsToTop(top: cardView.topAnchor, left: cardView.leftAnchor, bottom: nil,  right: cardView.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
+        
+        replyTableView.anchorWithConstantsToTop(top: cardView.topAnchor, left: cardView.leftAnchor, bottom: replyView.topAnchor, right: cardView.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
         
         
     }
     
-    
-    let replyView = ReplyView()
-    let commentView = UserNameCommentView()
+    let imagePicker = UIImagePickerController()
+    lazy var replyView:  ReplyView = {
+        let rv = ReplyView()
+        rv.replyTextField.delegate = self
+        return rv
+    }()
+    let cameraGalleryView = ReplyToGalleryCameraView()
+    var selectedImages = [UIImage]()
+
+
+    lazy var replyTableView: UITableView = {
+        let tv = UITableView()
+        tv.translatesAutoresizingMaskIntoConstraints  = false
+        tv.delegate = self
+        tv.dataSource = self
+        tv.rowHeight = UITableViewAutomaticDimension
+        tv.estimatedRowHeight = 1000
+        tv.separatorStyle = .none
+        tv.register(ReplyToConversationCell.self, forCellReuseIdentifier: "ReplyToConversationCell")
+       tv.showsVerticalScrollIndicator  = false
+        return tv
+        
+    }()
+
+    lazy var selectedImagesCollectionView: UICollectionView =  {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.delegate = self
+        cv.dataSource = self
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(NewConversationCell.self, forCellWithReuseIdentifier: "NewConversationCell")
+        cv.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cv.isPagingEnabled = true
+        cv.showsHorizontalScrollIndicator = false
+        return cv
+    }()
     
 }
 
@@ -110,15 +190,24 @@ class ReplyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    let replyTextField: UITextField = {
+
+
+
+//    let replyTextField: UISearchBar = {
+//        let sb = UISearchBar()
+//        sb.translatesAutoresizingMaskIntoConstraints = false
+//        sb.placeholder = "Reply here"
+//        return sb
+//    }()
+
+    lazy var replyTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints  = false
         tf.placeholder = "Reply here"
         return tf
     }()
-    
-    let attachmentButton: UIButton = {
+
+    lazy var attachmentButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setImage(#imageLiteral(resourceName: "attachmentImage").withRenderingMode(.alwaysTemplate), for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints  = false
@@ -126,7 +215,7 @@ class ReplyView: UIView {
         return btn
     }()
     
-    let sendButton: UIButton = {
+    lazy var sendButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setImage(#imageLiteral(resourceName: "sendImage").withRenderingMode(.alwaysTemplate), for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints  = false

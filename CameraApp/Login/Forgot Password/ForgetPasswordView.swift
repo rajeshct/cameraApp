@@ -48,6 +48,7 @@ class ForgotPasswordView: UIView {
         cardView.addSubview(submitButton)
         cardView.addSubview(forgotPasswordLabel)
         cardView.addSubview(closeButton)
+        closeButton.addSubview(activityIndicator)
         
         cardView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
@@ -71,6 +72,8 @@ class ForgotPasswordView: UIView {
         closeButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
         
         
+        activityIndicator.centerXAnchor.constraint(equalTo: submitButton.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: submitButton.centerYAnchor).isActive = true
         
         
         
@@ -113,7 +116,7 @@ class ForgotPasswordView: UIView {
         btn.backgroundColor = #colorLiteral(red: 0.4470588235, green: 0.568627451, blue: 0.9568627451, alpha: 1)
         btn.layer.cornerRadius = 10
         btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-      //  btn.addTarget(self, action: #selector(handleEnter), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
         return btn
     }()
     
@@ -134,4 +137,15 @@ class ForgotPasswordView: UIView {
         lbl.textColor = .black
         return lbl
     }()
+    
+    
+    let activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView()
+        ai.activityIndicatorViewStyle = .white
+        ai.stopAnimating()
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        return ai
+    }()
+
+    
 }

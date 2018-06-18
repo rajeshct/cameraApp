@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import UserNotifications
+import Fabric
+import Crashlytics
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+                // Enable or disable features based on authorization.
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        application.registerForRemoteNotifications()
+        
+        //IQKeyboardManager.shared.enable = true
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = HomeTabBarController()
+        Fabric.with([Crashlytics.self])
+        
         return true
     }
 
@@ -41,6 +64,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print(deviceTokenString)
+    }
+    
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+        print("i am not available in simulator \(error)")
+    }
 
 }
 

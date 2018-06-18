@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.7.0)
+  - BiometricAuthentication (1.0.5)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
+  - FLAnimatedImage (1.0.12)
+  - IQKeyboardManagerSwift (6.0.3)
+  - JTAppleCalendar (7.1.5)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
+  - UPCarouselFlowLayout (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - BiometricAuthentication
+  - Crashlytics
+  - Fabric
+  - IQKeyboardManagerSwift
+  - JTAppleCalendar (~> 7.0)
+  - PINRemoteImage
+  - UPCarouselFlowLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BiometricAuthentication
+    - Crashlytics
+    - Fabric
+    - FLAnimatedImage
+    - IQKeyboardManagerSwift
+    - JTAppleCalendar
+    - PINCache
+    - PINRemoteImage
+    - UPCarouselFlowLayout
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  BiometricAuthentication: e80e99bf1fe871ab624172eb91f1ddbbc47499b5
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  UPCarouselFlowLayout: 02045c1505d63057fba3d9975be880a8d16bf17d
+
+PODFILE CHECKSUM: 9e4eb5129eea95df4f00dc21699ce0c49f28db88
+
+COCOAPODS: 1.5.2

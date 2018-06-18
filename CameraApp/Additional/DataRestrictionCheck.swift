@@ -6,4 +6,21 @@
 //  Copyright © 2018 JEEVAN TIWARI. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class DataRestrictionCheck{
+    
+    static let shared = DataRestrictionCheck()
+    
+    func checkEmptyTextField(textField: UITextField) -> Bool{
+        
+        if textField.text == ""{
+            return true
+        }
+        
+        return false
+    }
+    
+}
+
+
